@@ -1,0 +1,62 @@
+.navbar {
+    width: 100%;
+    min-height: 130px;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 10rem;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 20px;
+
+    .navbarTop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .contactInfo {
+            display: flex;
+            align-items: center;
+            column-gap: 3rem;
+
+            .info {
+                display: flex;
+                align-items: center;
+
+                span {
+                    color: #fff;
+
+                    margin-left: 15px;
+                }
+            }
+
+            .contactBtn {
+                width: 196px;
+                height: 50px;
+                border-radius: 40px;
+                font-size: 16px;
+                cursor: pointer;
+                background: #fff;
+                outline: none;
+                border: none;
+            }
+        }
+    }
+
+    .nav {
+        display: flex;
+        justify-content: center;
+
+        .navLink {
+            list-style: none;
+            color: #fff;
+            margin-right: 50px;
+            font-size: 18px;
+
+            &:nth-child(4) {
+                margin-right: 5px;
+            }
+
+        }
+    }
+}

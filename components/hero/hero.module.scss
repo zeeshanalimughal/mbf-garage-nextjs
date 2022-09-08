@@ -1,0 +1,48 @@
+.heroContainer {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .9), rgba(0, 0, 0, .7), rgba(0, 0, 0, .5), transparent), url(../../public/images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .content {
+        max-width: 60%;
+        width: 100%;
+        color: #fff;
+
+        .headingSmall {
+            font-size: 2.5rem;
+        }
+
+        .headingLarge {
+            font-size: 4rem;
+            margin-top: 15px;
+        }
+
+        .description {
+            margin-top: .7rem;
+            font-size: 22px;
+            max-width: 48%;
+            line-height: 1.8;
+        }
+
+        .button {
+            width: 300px;
+            height: 60px;
+            margin-top: 5rem;
+            border-radius: 40px;
+            font-size: 24px;
+            font-weight: 800;
+            color: #fff;
+            border: none;
+            outline: none;
+            background: #FFB300;
+            box-shadow: 8px 12px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+
+        }
+    }
+}

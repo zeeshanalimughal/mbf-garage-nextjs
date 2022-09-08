@@ -1,0 +1,25 @@
+.portfolioContainer {
+    min-height: 90vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 4rem 1rem;
+
+    .title {
+        font-size: 3rem;
+    }
+    .imagesContainer{
+        margin-top: 3rem;
+        width: 70%;
+        gap: 1.5rem;
+        display: grid; 
+        grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
+        .image{
+            object-fit: cover;
+            border-radius: 20px;
+        }
+        
+    }
+
+}
