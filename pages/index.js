@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../components/footer/footer'
 import Hero from '../components/hero/hero'
 import Navbar from '../components/navbar/navbar'
 import Offers from '../components/offers/offers'
@@ -19,6 +20,7 @@ function index() {
         <Offers/>
         <Work/>
         <Portfolio/>
+        <Footer/>
 
     </React.Fragment>
   )

@@ -1,0 +1,98 @@
+.addContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 105%;
+    width: 105%;
+    min-height: 55vh;
+    background: #273446;
+    border-radius: 42px;
+    padding:2rem 2rem 2rem 3rem;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+    animation:scale .2s linear ;
+    flex-wrap: wrap-reverse;
+    @keyframes scale {
+        0%{
+            transform:translate(-50%, -50%) scale(0)
+        }
+        100%{
+            transform:translate(-50%, -50%) scale(1)
+        }
+    }
+    .closeIcon{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    .leftContent{
+        flex: 1.5;
+        .heading{
+            font-size: 3rem;
+            font-weight: 300;
+            line-height:53.64px;
+            span{
+                font-weight: 700;
+                font-style: italic;
+            }
+        }
+        .validText{
+            font-size: 15px;
+            font-weight: 400;
+            line-height:26.55px;
+            margin:15px 0;
+        }
+        .btnQuote{
+            width:211px;
+            height:50px;
+            border-radius: 40px;
+            background-color: #FFB300;
+            color: #fff;
+            font-size: 21px;
+            font-weight: 800;
+            line-height: 28px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+    .rightImage{
+        flex: 1;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        .imageContainer{
+            width: 300px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            img{
+                // position: absolute;
+                bottom: -10px !important;
+                left: 30;
+                z-index: 10;
+                width:290px !important;
+                height:440px !important;
+                object-fit: contain;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                width: 350px;
+                height: 350px;
+                top: 50%;
+                left: 50%;
+                transform:translate(-50%, -40%);
+                border-radius:50%;
+                background:#FFE300;
+            }
+        }
+    }
+}

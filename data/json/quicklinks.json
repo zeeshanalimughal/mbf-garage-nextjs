@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "name":"About us",
+        "path":"/about",
+        "active":true
+    },
+    {
+        "id":2,
+        "name":"Contact us",
+        "path":"/contact",
+        "active":true
+    },
+    {
+        "id":3,
+        "name":"Offers",
+        "path":"/offers",
+        "active":true
+    },
+    {
+        "id":4,
+        "name":"Services",
+        "path":"/services",
+        "active":true
+    }
+]

@@ -19,12 +19,12 @@ function Portfolio() {
             </h1>
 
             <div className={styles.imagesContainer}>
-                <Image className={styles.image} src={portfolio1} height={400}/>
-                <Image className={styles.image} src={portfolio2} height={400}/>
-                <Image className={styles.image} src={portfolio3} height={400}/>
-                <Image className={styles.image} src={portfolio4} height={400}/>
-                <Image className={styles.image} src={portfolio5} height={400}/>
-                <Image className={styles.image} src={portfolio6} height={400}/>
+                <Image className={styles.image} src={portfolio1} height={320}/>
+                <Image className={styles.image} src={portfolio2} height={320}/>
+                <Image className={styles.image} src={portfolio3} height={320}/>
+                <Image className={styles.image} src={portfolio4} height={320}/>
+                <Image className={styles.image} src={portfolio5} height={320}/>
+                <Image className={styles.image} src={portfolio6} height={320}/>
             </div>
         </div>
     )
