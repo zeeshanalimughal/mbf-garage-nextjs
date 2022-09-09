@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useState} from 'react'
 import * as styles from './navbar.module.scss'
 import linksData from '../../data/json/links.json'
 import generalData from '../../data/json/general.json'
@@ -8,7 +8,13 @@ import Link from 'next/link'
 import locationIcon from '../../public/images/icons/Poi.png'
 import phoneIcon from '../../public/images/icons/Phone.png'
 import newIcon from '../../public/images/icons/New.png'
+import { HiOutlineMenuAlt3 , HiOutlineX} from "react-icons/hi";
+
+
 function Navbar() {
+
+  const [toggle,setToggle] = useState(false)
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.navbarTop}>
@@ -39,12 +45,18 @@ function Navbar() {
           </button>
           </Link>
         </div>
+    <div className={styles.menu} onClick={()=>setToggle(!toggle)}>
+      <HiOutlineMenuAlt3/>
+    </div>
       </div>
 
-      <ul className={styles.nav}>
+      <ul className={!toggle ? styles.nav : [styles.nav, styles.active].join(' ')}>
+        <div className={styles.menuClose} onClick={()=>setToggle(!toggle)}>
+          <HiOutlineX/>
+        </div>
         {linksData.map(link => link.active && (
           <li key={link.id} className={styles.navLink}>
-            <Link href={link.path}>
+            <Link href={link.path} className={styles.navItem}>
               {link.name}
             </Link>
           </li>

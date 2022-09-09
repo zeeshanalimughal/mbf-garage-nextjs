@@ -13,6 +13,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
+
+        .menu {
+            font-size: 30px;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 20px;
+            display: none;
+        }
 
         .contactInfo {
             display: flex;
@@ -25,7 +36,6 @@
 
                 span {
                     color: #fff;
-
                     margin-left: 15px;
                 }
             }
@@ -46,6 +56,16 @@
     .nav {
         display: flex;
         justify-content: center;
+        position: relative;
+
+        .menuClose {
+            font-size: 35px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #fff;
+            display: none;
+        }
 
         .navLink {
             list-style: none;
@@ -58,5 +78,133 @@
             }
 
         }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// Media Queries
+
+@media (max-width:1280px) {
+    .navbar {
+        padding: 10px 2rem;
+
+        .navbarTop {
+            display: flex;
+            gap: 2rem;
+
+            // flex-wrap: wrap;
+            .contactInfo {
+                column-gap: 1rem;
+                flex-wrap: wrap;
+
+                .contactBtn {
+                    width: 136px;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width:910px) {
+    .navbar {
+        padding: 10px 1rem;
+
+        .navbarTop {
+            display: flex;
+            gap: 2rem;
+
+            // flex-wrap: wrap;
+            .contactBtn {
+                display: none;
+            }
+
+            .info {
+                span {
+                    color: #fff;
+                    margin-left: 5px !important;
+                    font-size: 14px;
+                    padding: 5px;
+                }
+
+                img {
+                    width: 15px !important;
+                    height: 25px !important;
+                }
+            }
+
+        }
+    }
+}
+
+
+
+
+
+@media (max-width:600px) {
+    .navbarTop {
+        .menu {
+            display: flex !important;
+        }
+
+        .contactInfo {
+            display: none !important;
+        }
+    }
+
+    .nav {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column !important;
+        margin-top: 10px !important;
+        position: fixed !important;
+        z-index: 10 !important;
+        width: 70% !important;
+        height: 100%;
+        background: #FFB300;
+        top: -10px;
+        right: -500px;
+        padding: 3rem 1rem 1rem 3rem;
+        transition: all 0.5s;
+
+        .menuClose {
+            display: block !important;
+        }
+
+        .navLink {
+            margin-right: 20px !important;
+            display: block !important;
+            width: 100% !important;
+            font-size: 1.5rem !important;
+            margin-bottom: 2.5rem;
+        }
+
+        .navNewIcon {
+            display: none !important;
+        }
+    }
+
+    .nav.active{
+        right: 0px !important;
+
+    }
+}
+
+
+
+@media (max-width:360px) {
+    .nav {
+        width: 100% !important;
     }
 }
